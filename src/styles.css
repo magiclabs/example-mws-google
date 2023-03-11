@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+/* NavBar */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+
+  padding: 0.5rem;
+  background-color: #000;
+}
+
+#appName {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  font-family: monospace;
+  color: #fff;
+  font-size: 2rem;
+}
+
+#logo {
+  width: 3rem;
+}
+
+#navButtons {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks {
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.3em;
+  color: #fff;
+  background-color: #6851FF;
+  transition: background-color 2s;
+}
+
+.navLinks:hover {
+  cursor: pointer;
+  background-color: #4535ae;
+}
+
+/* Home */
+
+#home {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 5em;
+}
+
+#home div{
+  font-size: large;
+}
+
+/* GoogleOneTap */
+
+.oneTapContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.purple-btn {
+  border-radius: 5px;
+  padding: 1rem;
+
+  font-size: 1em;
+  color: white;
+  background-color: #6851ff;
+}
+
+/* Profile */
+
+#user {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#userProfile {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 1em auto;
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #6851ff2b;
+}
+
+.logout {
+  width: 50%;
+  margin: auto;
+}
+
+.userImageWrapper {
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
+  border: solid 2px black;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.userImageWrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.04);
+}
+
+.label {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.profile-info {
+  width: 100%;
+  font-family: monospace;
+  font-size: 1.5em;
+
+  word-wrap: break-word;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+
+  border-top: solid 8px #6851ff75;
+  padding: 1em;
+  text-align: center;
+  background-color: #6851ff2b;
+}
+
+#footerInfo {
+  display: flex;
+  justify-content: space-around;
+  gap: 5em;
+
+  max-width: 1000px;
+}
+
