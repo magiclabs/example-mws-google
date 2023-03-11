@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+// Views
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import UserProfile from "./components/UserProfile";
+
+import { UserContext } from "./utils/UserContext";
+import Footer from "./components/Footer";
+
+export default function App() {
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    if (!user || !user.iss) {
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+      storedUser?.iss ? setUser(storedUser) : setUser();
+    }
+  }, [user]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <UserContext.Provider value={[user, setUser]}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<UserProfile />} />
+        </Routes>
+      </UserContext.Provider>
+      <Footer />
+    </>
   );
 }
-
-export default App;
