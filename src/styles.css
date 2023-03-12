@@ -185,6 +185,6 @@ footer {
   justify-content: space-around;
   gap: 5em;
 
-  max-width: 1000px;
+  margin: auto;
 }
 

@@ -6,6 +6,7 @@ import logo from "../img/logo.png";
 export default function User() {
   const [user, setUser] = useContext(UserContext);
   const navigate = useNavigate();
+
   const handleLogout = () => {
     setUser();
     localStorage.removeItem("user");
@@ -15,7 +16,7 @@ export default function User() {
 
   return (
     <div id="user">
-      {user && user.iss && (
+      {user?.iss && (
         <div id="userProfile">
           <h1>
             Hello {user.given_name} {user.family_name}!

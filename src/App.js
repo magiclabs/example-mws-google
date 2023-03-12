@@ -13,7 +13,7 @@ export default function App() {
   const [user, setUser] = useState();
 
   useEffect(() => {
-    if (!user || !user.iss) {
+    if (!user?.iss) {
       const storedUser = JSON.parse(localStorage.getItem("user"));
       storedUser?.iss ? setUser(storedUser) : setUser();
     }
