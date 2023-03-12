@@ -2,7 +2,7 @@
 
 An example app showcasing the simplicity of the Magic Wallet Services setup with Google as the identity provider.
 
-[Visit the deployed app here](https://) ↗
+[Visit the deployed app here](https://mws-google.herokuapp.com/) ↗
 
 ## Prerequisites
 
