@@ -26,6 +26,7 @@ export default function GoogleOneTapLogin() {
       });
 
       if (did) {
+        console.log("DID Token:", did);
         const magicUser = await magic.user.getMetadata();
 
         // parse info from id token
